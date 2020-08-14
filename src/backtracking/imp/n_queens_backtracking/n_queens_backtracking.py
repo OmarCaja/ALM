@@ -13,10 +13,6 @@ class NQueensBacktracking(Backtracking):
     def board(self):
         return self.__board
 
-    @board.setter
-    def board(self, board):
-        self.__board = board
-
     @property
     def nodes_to_explore(self):
         return self.__nodes_to_explore

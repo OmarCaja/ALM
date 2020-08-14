@@ -12,10 +12,6 @@ class SudokuBacktracking(Backtracking):
     def sudoku(self):
         return self.__sudoku
 
-    @sudoku.setter
-    def sudoku(self, sudoku):
-        self.__sudoku = sudoku
-
     @property
     def nodes_to_explore(self):
         return self.__nodes_to_explore

@@ -21,5 +21,8 @@ sudoku_n_solutions = [[0, 7, 0, 0, 2, 0, 0, 5, 0],
                       [0, 0, 1, 0, 0, 0, 0, 0, 0]]
 
 sudoku_backtracking = SudokuBacktracking(sudoku_1_solution)
+print(sudoku_backtracking.solve())
+
+sudoku_backtracking = SudokuBacktracking(sudoku_n_solutions)
 for solution in sudoku_backtracking.solve_all_solutions():
     print(solution)
