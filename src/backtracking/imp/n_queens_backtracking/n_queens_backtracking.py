@@ -21,18 +21,18 @@ class NQueensBacktracking(Backtracking):
         return not self.nodes_to_explore
 
     def _is_promising(self, value, pos):
-        return self.__are_all_queens_in_different_rows(value, pos) and \
+        return self.__are_all_queens_in_different_rows(value) and \
                self.__are_all_queens_in_different_diagonals(value, pos)
 
-    def __are_all_queens_in_different_rows(self, value, pos):
-        for index in range(pos):
-            if self.board[index] == value:
+    def __are_all_queens_in_different_rows(self, value):
+        for index in range(len(self.board)):
+            if self.board[index] != -1 and self.board[index] == value:
                 return False
         return True
 
     def __are_all_queens_in_different_diagonals(self, value, pos):
-        for index in range(pos):
-            if abs(self.board[index] - value) == pos - index:
+        for index in range(len(self.board)):
+            if self.board[index] != -1 and abs(self.board[index] - value) == abs(pos - index):
                 return False
         return True
 
